@@ -20,7 +20,7 @@ html {
 /* -------------------------------- */
 .row {
     max-width: 1140px;
-    margin-left: 0 auto;
+    margin: 0 auto;
 }
 
 /* ------- HEADINGS ------- */
@@ -89,13 +89,13 @@ header {
 .logo {
     height: 100px;
     width: auto;
-    float: left;
     margin-top: 20px;
+    float: left;
 }
 .main-nav {
     float: right;
     list-style: none;
-    margin-top: 60px;
+    margin-top: 55px;
 }
 .main-nav li {
     display: inline-block; /*makes it side by side*/
