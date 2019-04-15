@@ -6,7 +6,6 @@ This project is a fictional food delivery company that provides healthy meals to
 ___
 Lessons I learned throughout the project include the basic guidelines of web design. This involves typography, working with colors, images and icons, and proper spacing and layout techniques to produce professional-looking websites.
 
-
 ### Languages:
 * HTML5
 * CSS3
