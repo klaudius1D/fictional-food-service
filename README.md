@@ -4,7 +4,7 @@ This project is a fictional food delivery company that provides healthy meals to
 >*Build Responsive Real World Websites with HTML5 and CSS3* by **Jonas Schmedtmann**
 
 ___
-Lessons I learned throughout the project include the basic guidelines of web design. This involves typography, working with colors, images and icons, and proper spacing and layout techniques to produce professional-looking websites.
+Lessons I learned throughout the project include the basic guidelines of web design. This involves typography, working with colors, images and icons. This also touched on proper spacing and layout techniques to produce professional-looking websites.
 
 ### Languages:
 * HTML5
