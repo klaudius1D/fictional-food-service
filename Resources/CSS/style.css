@@ -14,7 +14,14 @@ html {
     font-weight: 300;
     text-rendering: optimizeLegibility;
 }
-
+.clearfix { zoom: 1}
+.clearfix:after { /*clears float after an element, in this case li elements have the float properties*/
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
 /* -------------------------------- */
 /* REUSABLE COMPONENTS */
 /* -------------------------------- */
@@ -22,18 +29,75 @@ html {
     max-width: 1140px;
     margin: 0 auto;
 }
+section {
+    padding: 80px 0;
+}
+.box {
+    padding: 1%;
+}
 
 /* ------- HEADINGS ------- */
+h1, h2, h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 h1 {
     margin-top: 0;
     margin-bottom: 20px;
     color: #fff;
     font-size: 240%;
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 1px;
     word-spacing: 4px;
-   
+}
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #44bd32;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+/* ------- PARAGRAPHS ------- */
+.long-copy {
+    line-height: 145%;
+    width: 70%;
+    margin: 0 15%;
+}
+.box p {
+    line-height: 145%;
+}
+/* ------- BUTTONS ------- */
+.icon-big {
+    font-size: 350%;
+    display: block;
+    color: #44bd32;
+    margin-bottom: 8px;
+}
+.icon-small {
+    display: inline-block;
+    width: 50px;
+    text-align: center;
+    color: #44bd32;
+    font-size: 250%;
+    margin-right
+    /*align trick that works*/
+    line-height: 150%;
+    vertical-align: middle;
+    margin-top: -5px;
+
+    
 }
 
 /* ------- BUTTONS ------- */
@@ -47,25 +111,25 @@ h1 {
 }
 
 .b-full:link, .b-full:visited {
-    background-color: #e67e22;
-    border: 1px solid #e67e22;
+    background-color: #44bd32;
+    border: 1px solid #44bd32;
     color: #fff;
     margin-right: 15px;
 }
 .b-ghost:link, .b-ghost:visited {
-    border: 1px solid #e67e22;
-    color: #e67e22;
+    border: 1px solid #44bd32;
+    color: #44bd32;
 }
 .button:hover, .button:active {
-    background-color: #c06515;
+    background-color: #369527;
 }
 .b-full:hover, .b-full:active {
-    background-color: #c06515;
-    border: 1px solid #e67e22;
+    background-color: #369527;
+    border: 1px solid #44bd32;
     color: #fff;
 }
 .b-ghost:hover, .b-ghost:active {
-    border: 1px solid #c06515;
+    border: 1px solid #369527;
     color: #fff;
 }
 
@@ -85,6 +149,15 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+.hero-text-box .title {
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0px;
+    font-size: 300%;
+}
+.hero-text-box .subtitle {
+    font-size: 180%;
 }
 .logo {
     height: 100px;
@@ -108,11 +181,107 @@ header {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 90%;
-    border-bottom: 2px solid transparent;
+    border-bottom: 4px solid transparent;
     transition: border-bottom 0.3s;
     
 }
 .main-nav li a:hover, 
 .main-nav li a:active {
-    border-bottom: 2px solid #e67e22;
+    border-bottom: 2px solid #44bd32;
+}
+
+/* -------------------------------- */
+/* FEATURES */
+/* -------------------------------- */
+.section-features .long-copy {
+    margin-bottom: 30px;
+}
+
+/* -------------------------------- */
+/* MEALS */
+/* -------------------------------- */
+
+.section-meals {
+    padding: 0;
+}
+.meals-showcase {
+    list-style: none;
+    width: 100%;
+}
+.meals-showcase li {
+    display: block;
+    float: left;
+    width: 25%; /*100/4 because there are four pictures per list*/
+}
+.meal-photo {
+    width: 100%;
+    margin: 0;
+    overflow: hidden; /*for transform property so it doesn't stretch out of browser*/
+    background-color: #000;
+
+}
+.meal-photo img {
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+}
+.meal-photo img:hover {
+    transform: scale(1.05);
+    transition: transform 0.5s, opacity 0.5s;
+    opacity: 1;
+}
+/* -------------------------------- */
+/* HOW IT WORKS */
+/* -------------------------------- */
+.section-steps {
+    background-color: #f4f4f4;
+}
+.steps-box:first-child {
+    text-align: right;
+    padding-right: 3%;
+    margin-top: 30px;
+}
+.steps-box:last-child {
+    padding-left: 3%;
+    margin-top: 70px;
+}
+.app-screen {
+    width: 40%;
+}
+.works-step {
+    margin-bottom: 45px;
+}
+.works-step:last-of-type {
+    margin-bottom: 80px;
+}
+
+.works-step div {
+    color: #44bd32;
+    border: solid 2px #44bd32;
+    display: inline-block;
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    padding: 8px;
+    float: left;
+    font-size: 150%;
+    margin-right: 25px;
+}
+.button-app {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+/* -------------------------------- */
+/* CITIES */
+/* -------------------------------- */
+.box img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+.city-feature {
+    margin-bottom: 8px;
 }
