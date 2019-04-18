@@ -82,10 +82,11 @@ h2:after {
 a:link,
 a:visited {
     text-decoration: none;
-    border-bottom: 1px #44bd32 solid;
+    border-bottom: 2px #44bd32 solid;
     padding-bottom: 4px;
     color: #555;
     transition: border-bottom 0.2s;
+    
 }
 a:hover,
 a:active {
@@ -107,15 +108,18 @@ a:active {
     color: #44bd32;
     font-size: 120%;
     margin-right: 10px;
+    float: left;
     
     /*secrets to align text and icons*/
     line-height: 120%;
     vertical-align: middle;
-    margin-top: -5px;
+    margin-top: 8px;
 }
 
 /* ------- BUTTONS ------- */
-.button:link, :visited {
+.button:link, 
+.button:visited,
+input[type=submit] {
     display: inline-block;
     padding: 10px 30px;
     font-weight: 300;
@@ -124,25 +128,33 @@ a:active {
     transition: background-color 0.3s, color 0.3s, border 0.3s;
 }
 
-.b-full:link, .b-full:visited {
+.b-full:link, 
+.b-full:visited, 
+input[type=submit] {
     background-color: #44bd32;
     border: 1px solid #44bd32;
     color: #fff;
     margin-right: 15px;
 }
-.b-ghost:link, .b-ghost:visited {
+.b-ghost:link, 
+.b-ghost:visited {
     border: 1px solid #44bd32;
     color: #44bd32;
 }
-.button:hover, .button:active {
+.button:hover, 
+.button:active, 
+input[type=submit]:hover, 
+input[type=submit]:active {
     background-color: #369527;
 }
-.b-full:hover, .b-full:active {
+.b-full:hover, 
+.b-full:active {
     background-color: #369527;
     border: 1px solid #44bd32;
     color: #fff;
 }
-.b-ghost:hover, .b-ghost:active {
+.b-ghost:hover, 
+.b-ghost:active {
     border: 1px solid #369527;
     color: #fff;
 }
@@ -375,7 +387,7 @@ cite img {
 .plan-price {
     font-size: 300%;
     margin-bottom: 10px;
-    font-weight: 100;
+    font-weight: 300;
     color: #44bd32;
 }
 
@@ -394,5 +406,105 @@ cite img {
 
 .plan-box ul li {
     padding: 5px 0;
+}
+
+
+/* -------------------------------- */
+/* FORMS */
+/* -------------------------------- */
+.contact-form {
+    width: 60%;
+    margin: 0 auto; /* centers contact form inside of parent element*/
+}
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+textarea {
+    height: 150px;
+}
+input[type=checkbox] {
+    margin: 15px 5px 10px 0;
+}
+*:focus {
+    outline-color: #44bd32;
+}
+label {
+  display: block;
+  margin-top: 5px;
+}
+
+/* -------------------------------- */
+/* FOOTER */
+/* -------------------------------- */
+footer {
+    background-color: #333;
+    padding: 20px;
+}
+.footer-nav {
+    list-style: none;
+    float: left;
+    padding-top: 15px;
+}
+.social-links {
+    list-style: none;
+    float: right;
+}
+.footer-nav li,
+.social-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+.footer-nav li:last-child,
+.social-links li:last-child {
+    margin: 0;
+}
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+    text-decoration: none;
+    border: 0;
+    color: #888;
+    transition: color 0.3s;
+}
+.footer-nav li a:hover,
+.footer-nav li a:active {
+    color: #fff; 
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+    font-size: 200%;
+}
+.facebook:hover {
+    color: #3b5998;
+}
+.instagram:hover {
+    color: #517fa4;
+}
+.pinterest:hover {
+    color: #bd081c;
+}
+.github:hover {
+    color: #fff;
+}
+.github,
+.facebook,
+.pinterest,
+.instagram {
+    transition: color 0.3s;
+}
+
+footer p {
+    color: #888;
+    font-size: 90%;
+    text-align: center;
+    margin-top: 15px;
 }
 
