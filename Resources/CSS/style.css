@@ -187,8 +187,8 @@ header {
     width: 1140px;
     left: 50%; 
     top: 50%;
-    -webkit-transform: translate(-40%,-50%);
-            transform: translate(-40%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
 }
 .title {
     width: 100%;
@@ -437,7 +437,7 @@ cite img {
 }
 
 .plan-price {
-    font-size: 300%;
+    font-size: 300% !important;
     margin-bottom: 10px;
     font-weight: 300;
     color: #44bd32;
@@ -562,3 +562,25 @@ footer p {
     margin-top: 15px;
 }
 
+/* -------------------------------- */
+/* ANIMATIONS */
+/* -------------------------------- */
+.js--wp-1,
+.js--wp-2,
+.js--wp-3
+{
+    opacity: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.js--wp-4 {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated {
+    opacity: 1;
+}
