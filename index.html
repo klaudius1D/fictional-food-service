@@ -2,8 +2,10 @@
 <html lang="en">
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="node_modules/normalize.css/normalize.css">
   <link rel="stylesheet" type="text/css" href="Resources/CSS/style.css">
+  <link rel="stylesheet" type="text/css" href="Resources/CSS/queries.css">
   <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="Vendors/CSS/grid.css">
   <title>Bopper's Kitchen</title>
@@ -14,6 +16,7 @@
     <nav>
       <div class="row">
         <img src="Resources/Images/logo-white.png" alt="Omnifood logo" class="logo">
+        <img src="Resources/Images/logo.png" alt="Omnifood logo" class="logo-black">
         <ul class="main-nav">
           <li><a href="#">Food Delivery</a></li>
           <li><a href="#">How it works</a></li>
@@ -25,12 +28,12 @@
     <div class="hero-text-box">
       <h1 class="title"> Bopper's Kitchen <br></h1>
       <h1 class="subtitle">Goodbye junk food.<br> Hello to gourmet meals.</h1>
-      <a class="button b-full" href="#">I’m hungry </a>
-      <a class="button b-ghost" href="#">Show me more</a>
+      <a class="button b-full js--scroll-to-plans" href="#js--section-plans">I’m hungry </a>
+      <a class="button b-ghost js--scroll-to-start" href="#js--section-features">Show me more</a>
     </div>
   </header>
 
-  <section class="section-features">
+  <section class="section-features" id="js--section-features">
     <div class="row">
 
       <h2>Get food fast &mdash; not fast food.</h2>
@@ -223,12 +226,12 @@
     </div>
   </section>
 
-  <section class="section-plans">
+  <section class="section-plans" id="js--section-plans">
     <div class="row">
       <h2>Start eating healthy today</h2>
     </div>
     <div class="row">
-      <div class="col span-1-of-3">
+      <div class="col span-1-of-3 box">
         <div class="plan-box">
           <div>
             <h3>Premium</h3>
@@ -260,7 +263,7 @@
           </div>
         </div>
       </div>
-      <div class="col span-1-of-3">
+      <div class="col span-1-of-3 box">
         <div class="plan-box">
           <div>
             <h3>Pro</h3>
@@ -292,7 +295,7 @@
           </div>
         </div>
       </div>
-      <div class="col span-1-of-3">
+      <div class="col span-1-of-3 box">
         <div class="plan-box">
           <div>
             <h3>Starter</h3>
@@ -340,50 +343,51 @@
           <div class="col span-2-of-3">
             <input type="text" name="name" id="email" placeholder="abcd@xyz.ca" required>
           </div>
+        </div>
+        <div class="row">
+          <div class="col span-1-of-3">
+            <label for="name">Name</label>
+          </div>
+          <div class="col span-2-of-3">
+            <input type="text" name="name" id="name" placeholder="Full name" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col span-1-of-3">
+            <label id="hungry">How hungry are you?</label>
+          </div>
+          <div class="col span-2-of-3">
+            <select name="hunger-level" id="hungry">
+              <option value="extreme">Extremely</option>
+              <option value="moderate">I could eat</option>
+              <option value="satisfied">I just ate</option>
+              <option value="none">I don't eat</option>
+            </select>
+          </div>
           <div class="row">
             <div class="col span-1-of-3">
-              <label for="name">Name</label>
+              <label for="news">Do you like food commas?</label>
             </div>
             <div class="col span-2-of-3">
-              <input type="text" name="name" id="name" placeholder="Full name" required>
+              <input type="checkbox" name="news" id="news" checked>Obviously
             </div>
           </div>
           <div class="row">
             <div class="col span-1-of-3">
-              <label id="hungry">How hungry are you?</label>
+              <label>Do you have any suggestions?</label>
             </div>
             <div class="col span-2-of-3">
-              <select name="hunger-level" id="hungry">
-                <option value="extreme">Extremely</option>
-                <option value="moderate">I could eat</option>
-                <option value="satisfied">I just ate</option>
-                <option value="none">I don't eat</option>
-              </select>
+              <textarea name="message" placeholder="Suggest something"></textarea>
             </div>
-            <div class="row">
-              <div class="col span-1-of-3">
-                <label for="news">Do you like food commas?</label>
-              </div>
-              <div class="col span-2-of-3">
-                <input type="checkbox" name="news" id="news" checked>Obviously
-              </div>
+          </div>
+          <div class="row">
+            <div class="col span-1-of-3">
+              <label>&nbsp;</label>
             </div>
-            <div class="row">
-              <div class="col span-1-of-3">
-                <label>Do you have any suggestions?</label>
-              </div>
-              <div class="col span-2-of-3">
-                <textarea name="message" placeholder="Suggest something"></textarea>
-              </div>
+            <div class="col span-2-of-3">
+              <input type="submit" value="Full Send">
             </div>
-            <div class="row">
-              <div class="col span-1-of-3">
-                <label>&nbsp;</label>
-              </div>
-              <div class="col span-2-of-3">
-                <input type="submit" value="Full Send">
-              </div>
-            </div>
+          </div>
       </form>
     </div>
     </div>
@@ -424,10 +428,14 @@
     </div>
   </footer>
   <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/respond@0.9.0/main.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/selectivizr@1.0.3/selectivizr.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="Vendors/JS/jquery.waypoints.min.js"></script>
+  <script src="Resources/JS/script.js"></script>
 </body>
 
 </html>
-
-<!--
-
--->
