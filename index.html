@@ -2,7 +2,9 @@
 <html lang="en">
 
 <head>
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bopper's kitchen made by klaude">
   <link rel="stylesheet" type="text/css" href="node_modules/normalize.css/normalize.css">
   <link rel="stylesheet" type="text/css" href="Vendors/CSS/grid.css">
   <link rel="stylesheet" type="text/css" href="Vendors/css/animate.css">
@@ -10,6 +12,12 @@
   <link rel="stylesheet" type="text/css" href="Resources/CSS/queries.css">
   <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
 
+  <!--favicon.io-->
+  <link rel="apple-touch-icon" sizes="180x180" href="Resources/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="Resources/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="Resources/favicon/favicon-16x16.png">
+  <link rel="manifest" href="Resources/favicons/site2.webmanifest">
+  <link rel="shortcut icon" type="image/png" href="Resources/favicons/favicon-32x32-2.png">
   <title>Bopper's Kitchen</title>
 </head>
 
@@ -17,14 +25,17 @@
   <header>
     <nav>
       <div class="row">
-        <img src="Resources/Images/logo-white.png" alt="Omnifood logo" class="logo">
-        <img src="Resources/Images/logo.png" alt="Omnifood logo" class="logo-black">
+        <img src="Resources/Images/logo-white.png" alt="bopper's logo" class="logo">
+        <img src="Resources/Images/logo.png" alt="bopper's logo" class="logo-black">
         <ul class="main-nav js--main-nav">
           <li><a href="#features">Food Delivery</a></li>
           <li><a href="#steps">How it works</a></li>
           <li><a href="#cities">Our Cities</a></li>
           <li><a href="#plans">Sign up</a></li>
         </ul>
+        <a class="mobile-nav-icon js--nav-icon">
+          <ion-icon name="menu" class="nav-menu"></ion-icon>
+        </a>
       </div>
     </nav>
     <div class="hero-text-box">
@@ -81,6 +92,7 @@
   </section>
 
   <section class="section-meals">
+    <h4>Meals Showcase</h4>
     <ul class="meals-showcase clearfix">
       <li>
         <figure class="meal-photo">
@@ -207,21 +219,21 @@
           Bopper's kitchen is amazing. Try out their specialty lemon chicken - a recipe originated from the northern
           region
           that was passed on from generation to generation.
-          <cite><img src="Resources/Images/profile.jpeg">Klaude Dungca</cite>
+          <cite><img src="Resources/Images/profile.jpeg" alt="klaude's pic">Klaude Dungca</cite>
         </blockquote>
       </div>
       <div class="col span-1-of-3">
         <blockquote>
           Just like red-solo cups, they are cheap and their containers are disposable, in fourteen years they are
           decomposable. And you can guarantee they are not foreclosable!
-          <cite><img src="Resources/Images/hailey.jpg">Penelope Lestrange</cite>
+          <cite><img src="Resources/Images/hailey.jpg" alt="penelope's pic">Penelope Lestrange</cite>
         </blockquote>
       </div>
       <div class="col span-1-of-3">
         <blockquote>
           I am a man of many words but this... this is great convenient food. It left me speechless. I'd take this over
           Colonel Zanders and his army of genetically mutated chicken.
-          <cite><img src="Resources/Images/customer-1.jpg">Pizza Man</cite>
+          <cite><img src="Resources/Images/customer-1.jpg" alt="the pizza guy's pic">Pizza Man</cite>
         </blockquote>
       </div>
     </div>
@@ -243,19 +255,19 @@
             <ul>
               <li>
                 <ion-icon name="checkmark-circle-outline" class="icon-small"></ion-icon>
-                </ion-icon>1 meal every day
+                1 meal every day
               </li>
               <li>
                 <ion-icon name="checkmark-circle-outline" class="icon-small"></ion-icon>
-                </ion-icon>Order 24/7
+                Order 24/7
               </li>
               <li>
                 <ion-icon name="checkmark-circle-outline" class="icon-small"></ion-icon>
-                </ion-icon>Money back guarantee
+                Money back guarantee
               </li>
               <li>
                 <ion-icon name="checkmark-circle-outline" class="icon-small"></ion-icon>
-                </ion-icon>Free delivery
+                Free delivery
               </li>
             </ul>
           </div>
@@ -275,19 +287,19 @@
             <ul>
               <li>
                 <ion-icon name="checkmark-circle-outline" class="icon-small"></ion-icon>
-                </ion-icon>1 meal 10 days/month
+                1 meal 10 days/month
               </li>
               <li>
                 <ion-icon name="checkmark-circle-outline" class="icon-small"></ion-icon>
-                </ion-icon>Order 24/7
+                Order 24/7
               </li>
               <li>
                 <ion-icon name="checkmark-circle-outline" class="icon-small"></ion-icon>
-                </ion-icon>Money back guarantee
+                Money back guarantee
               </li>
               <li>
                 <ion-icon name="checkmark-circle-outline" class="icon-small"></ion-icon>
-                </ion-icon>Free delivery
+                Free delivery
               </li>
             </ul>
           </div>
@@ -307,18 +319,19 @@
             <ul>
               <li>
                 <ion-icon name="checkmark-circle-outline" class="icon-small"></ion-icon>
-                </ion-icon>1 meal
+                1 meal
               </li>
               <li>
                 <ion-icon name="checkmark-circle-outline" class="icon-small"></ion-icon>
-                </ion-icon>Order from 8am-12pm
+                Order from 8am-12pm
               </li>
               <li>
-                <ion-icon name="checkmark-circle-outline" class="icon-small"></ion-icon>Money back guarantee
+                <ion-icon name="checkmark-circle-outline" class="icon-small"></ion-icon>
+                Money back guarantee >
               </li>
               <li>
                 <ion-icon name="close-circle-outline" class="icon-small"></ion-icon>
-                </ion-icon>Free delivery
+                Free delivery
               </li>
             </ul>
           </div>
@@ -355,7 +368,7 @@
         </div>
         <div class="row">
           <div class="col span-1-of-3">
-            <label id="hungry">How hungry are you?</label>
+            <label>How hungry are you?</label>
           </div>
           <div class="col span-2-of-3">
             <select name="hunger-level" id="hungry">
@@ -365,33 +378,34 @@
               <option value="none">I don't eat</option>
             </select>
           </div>
-          <div class="row">
-            <div class="col span-1-of-3">
-              <label for="news">Do you like food commas?</label>
-            </div>
-            <div class="col span-2-of-3">
-              <input type="checkbox" name="news" id="news" checked>Obviously
-            </div>
+        </div>
+        <div class="row">
+          <div class="col span-1-of-3">
+            <label for="news">Do you like food comas?</label>
           </div>
-          <div class="row">
-            <div class="col span-1-of-3">
-              <label>Do you have any suggestions?</label>
-            </div>
-            <div class="col span-2-of-3">
-              <textarea name="message" placeholder="Suggest something"></textarea>
-            </div>
+          <div class="col span-2-of-3">
+            <input type="checkbox" name="news" id="news" checked>Obviously
           </div>
-          <div class="row">
-            <div class="col span-1-of-3">
-              <label>&nbsp;</label>
-            </div>
-            <div class="col span-2-of-3">
-              <input type="submit" value="Full Send">
-            </div>
+        </div>
+        <div class="row">
+          <div class="col span-1-of-3">
+            <label>Do you have any suggestions?</label>
           </div>
+          <div class="col span-2-of-3">
+            <textarea name="message" placeholder="Suggest something"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col span-1-of-3">
+            <label>&nbsp;</label>
+          </div>
+          <div class="col span-2-of-3">
+            <input type="submit" value="Full Send">
+          </div>
+        </div>
       </form>
     </div>
-    </div>
+
   </section>
 
   <footer>
@@ -415,7 +429,6 @@
             </a></li>
           <li><a href="https://www.instagram.com/klaudedungca/">
               <ion-icon name="logo-instagram" class="instagram"></ion-icon>
-              </ion-icon>
             </a></li>
           <li>
             <a href="https://github.com/klaudius1D">
