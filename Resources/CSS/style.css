@@ -175,7 +175,7 @@ input[type=submit]:active {
 /* -------------------------------- */
 
 #home-section {
-    background: url(/Resources/Images/hero.jpg);
+    background: url(/Resources/CSS/img/hero.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
